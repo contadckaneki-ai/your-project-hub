@@ -12,9 +12,9 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
           <div>
-            <span className="font-display text-xl font-bold">
+            <a href="/" className="font-display text-xl font-bold hover:opacity-80 transition-opacity">
               <span className="gradient-text">K</span>ally
-            </span>
+            </a>
             <p className="mt-2 text-sm text-muted-foreground">O melhor bot para o Discord!</p>
             <p className="mt-1 text-xs text-muted-foreground">Copyright © 2026 Kally Team.</p>
           </div>

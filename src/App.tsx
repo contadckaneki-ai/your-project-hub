@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import Plans from "./pages/Plans";
+import Terms from "./pages/Terms";
 import ServerSettings from "./pages/ServerSettings";
 import NotFound from "./pages/NotFound";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/plans" element={<Plans />} />
+          <Route path="/legal/terms" element={<Terms />} />
           <Route path="/server/:id/settings" element={<ServerSettings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

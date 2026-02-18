@@ -36,16 +36,20 @@ const Navbar = ({ showUserMenu = false }: NavbarProps) => {
         </span>
 
         <div className="hidden items-center gap-8 md:flex">
-          {["Planos", "Comandos", "Servidor de suporte"].map((item, i) => (
+          {[
+            { label: "Planos", href: "/plans" },
+            { label: "Comandos", href: "/#comandos" },
+            { label: "Servidor de suporte", href: "/#servidor-de-suporte" },
+          ].map((item, i) => (
             <motion.a
-              key={item}
-              href={`/#${item.toLowerCase().replace(/ /g, "-")}`}
+              key={item.label}
+              href={item.href}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + i * 0.1 }}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              {item}
+              {item.label}
             </motion.a>
           ))}
         </div>
@@ -119,7 +123,7 @@ const Navbar = ({ showUserMenu = false }: NavbarProps) => {
             className="overflow-hidden border-t border-border/50 bg-background md:hidden"
           >
             <div className="flex flex-col gap-4 p-4">
-              <a href="/#planos" className="text-sm text-muted-foreground">Planos</a>
+              <a href="/plans" className="text-sm text-muted-foreground">Planos</a>
               <a href="/#comandos" className="text-sm text-muted-foreground">Comandos</a>
               <a href="/#servidor-de-suporte" className="text-sm text-muted-foreground">Servidor de suporte</a>
               {showUserMenu ? (

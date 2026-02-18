@@ -39,7 +39,7 @@ const Navbar = ({ showUserMenu = false }: NavbarProps) => {
           {["Planos", "Comandos", "Servidor de suporte"].map((item, i) => (
             <motion.a
               key={item}
-              href={`#${item.toLowerCase().replace(/ /g, "-")}`}
+              href={`/#${item.toLowerCase().replace(/ /g, "-")}`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + i * 0.1 }}
@@ -119,9 +119,9 @@ const Navbar = ({ showUserMenu = false }: NavbarProps) => {
             className="overflow-hidden border-t border-border/50 bg-background md:hidden"
           >
             <div className="flex flex-col gap-4 p-4">
-              <a href="#planos" className="text-sm text-muted-foreground">Planos</a>
-              <a href="#comandos" className="text-sm text-muted-foreground">Comandos</a>
-              <a href="#suporte" className="text-sm text-muted-foreground">Servidor de suporte</a>
+              <a href="/#planos" className="text-sm text-muted-foreground">Planos</a>
+              <a href="/#comandos" className="text-sm text-muted-foreground">Comandos</a>
+              <a href="/#servidor-de-suporte" className="text-sm text-muted-foreground">Servidor de suporte</a>
               {showUserMenu ? (
                 <div className="flex items-center gap-2">
                   <img
